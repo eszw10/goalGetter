@@ -33,6 +33,7 @@
                 android:textSize="24sp" />
 
             <TextView
+                android:id="@+id/top_task_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="6 Tasks"
@@ -42,6 +43,7 @@
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_task_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorPrimaryLight"
@@ -54,7 +56,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@drawable/rounded_layout_container"
-        android:padding="18dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="18dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/heading">
@@ -88,6 +92,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/main_task_count"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
@@ -96,44 +101,11 @@
             android:textColor="@color/colorPrimaryDarkActive"
             android:text="6 Tasks" />
 
-        <ScrollView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/task_list_home"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <include
-                    layout="@layout/task_strip"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp" />
-                <include
-                    layout="@layout/task_strip"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp" />
-                <include
-                    layout="@layout/task_strip"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp" />
-                <include
-                    layout="@layout/task_strip"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp" />
-                <include
-                    layout="@layout/task_strip"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp" />
-
-            </LinearLayout>
-
-        </ScrollView>
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
     </LinearLayout>
 
