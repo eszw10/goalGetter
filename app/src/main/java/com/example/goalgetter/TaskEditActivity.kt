@@ -41,7 +41,7 @@ class TaskEditActivity : AppCompatActivity() {
                 generateID(12),
                 findViewById<EditText>(R.id.task_title_input).text.toString(),
                 findViewById<EditText>(R.id.task_description_input).text.toString(),
-                intent.getParcelableExtra("date", LocalDate::class.java)!!,
+                LocalDate.now(),
                 false,
                 findViewById<EditText>(R.id.task_start_input).text.toString(),
                 findViewById<EditText>(R.id.task_end_input).text.toString(),
@@ -54,6 +54,8 @@ class TaskEditActivity : AppCompatActivity() {
                 editTodo?.start = todo.start
                 editTodo?.end = todo.end
                 todo = editTodo!!
+            } else {
+                todo.date = intent.getParcelableExtra("date", LocalDate::class.java)!!
             }
 
             val resultIntent = Intent()
