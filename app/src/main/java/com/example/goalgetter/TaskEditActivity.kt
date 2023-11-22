@@ -28,6 +28,7 @@ class TaskEditActivity : AppCompatActivity() {
             findViewById<EditText>(R.id.task_description_input).setText(editTodo?.description)
             findViewById<EditText>(R.id.task_start_input).setText(editTodo?.start)
             findViewById<EditText>(R.id.task_end_input).setText(editTodo?.end)
+            findViewById<Button>(R.id.submit_todo_button).text = "Edit Task"
             findViewById<TextView>(R.id.app_bar_title).text = "Edit Task"
         }
 
@@ -40,7 +41,7 @@ class TaskEditActivity : AppCompatActivity() {
                 generateID(12),
                 findViewById<EditText>(R.id.task_title_input).text.toString(),
                 findViewById<EditText>(R.id.task_description_input).text.toString(),
-                LocalDate.now(),
+                intent.getParcelableExtra("date", LocalDate::class.java)!!,
                 false,
                 findViewById<EditText>(R.id.task_start_input).text.toString(),
                 findViewById<EditText>(R.id.task_end_input).text.toString(),

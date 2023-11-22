@@ -3,6 +3,7 @@ package com.example.goalgetter
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import java.time.LocalDate
 
 class TodoViewModel : ViewModel() {
     private val _todoList = MutableLiveData<List<TodoItem>>()
@@ -25,5 +26,9 @@ class TodoViewModel : ViewModel() {
             currentList[index] = todoItem
             _todoList.value = currentList
         }
+    }
+
+    fun refresh() {
+        _todoList.value = _todoList.value
     }
 }

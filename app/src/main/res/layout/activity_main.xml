@@ -69,25 +69,57 @@
             android:layout_marginBottom="24dp"
             android:orientation="horizontal">
 
-            <include layout="@layout/calendar_box" />
+            <Button
+                android:id="@+id/button_date1"
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:backgroundTint="@color/colorSecondaryLight"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="14\nWed">
+            </Button>
             <Space
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"/>
 
-            <include layout="@layout/calendar_box" />
+            <Button
+                android:id="@+id/button_date2"
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:backgroundTint="@color/colorSecondaryLight"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="14\nWed">
+            </Button>
             <Space
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"/>
 
-            <include layout="@layout/calendar_box" />
+            <Button
+                android:id="@+id/button_date3"
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:backgroundTint="@color/colorSecondaryLight"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="14\nWed">
+            </Button>
             <Space
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"/>
 
-            <include layout="@layout/calendar_box" />
+            <Button
+                android:id="@+id/button_date4"
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:backgroundTint="@color/colorSecondaryLight"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="14\nWed">
+            </Button>
 
         </LinearLayout>
 
